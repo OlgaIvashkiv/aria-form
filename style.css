@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: #f55767;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    opacity: 90%;
+}
+
+#form {
+    margin: 20% auto;
+    padding: 10%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+}
+
+.col1 {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1em;
+}
+
+.col2 {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: .5em;
+    height: 1em;
+    margin-top: .4rem;
+    margin-bottom: .4rem;
+    margin-right: .4em;
+}
+
+label {
+    margin-top: .4em;
+    margin-bottom: .4em;
+}
+
+select {
+    height: 2em;
+    margin-top: .4rem;
+    margin-bottom: .4rem;
+}
+
+input[type="submit"], input[type="reset"] {
+    border: none;
+    padding: 1em;
+    background-color: #187fd9;
+    color: white;
+    height: auto;
+}
+
+.textarea {
+    width: 95%;
+}
+
+textarea {
+    width: 100%;
+}
+@media (max-width: 620px) {
+    #form {
+        flex-direction: column;
+    }
+    input {
+        width: fit-content;
+    }
+}

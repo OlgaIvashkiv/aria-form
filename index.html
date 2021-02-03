@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>ARIA</title>
+</head>
+<body>
+<section>
+    <div class="container">
+    <form autocomplete="on" id="form" role="form" aria-label="Register form">
+        <div class="col1">
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="name" placeholder="First Name">
+            <label for="surname">Second Name:</label>
+            <input type="text" id="surname" name="surname" placeholder="Second Name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email">
+            <label for="phone">Phone:
+            </label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+        </div>
+        <div class="col2">
+            <label for="date">Delivery Date:</label>
+            <input type="date" id="date" name="date">
+            <p>Payment Type:</p>
+            <label>
+                <input type="radio" name="cash" checked>Cash
+            </label>
+            <label>
+                <input type="radio" name="card" checked>Card
+            </label>
+            <label for="delivery">Delivery type:</label>
+            <select name="delivery" id="delivery">
+                <option value="Select">Select</option>
+            </select>
+            <label>
+                <input type="checkbox" checked name="subscribe"> Daily Newsletter
+            </label>
+        </div>
+            <label class="textarea">Comment:
+                <textarea id="comment" name="comment" rows="5">
+                </textarea>
+            </label>
+            <div class="btn">
+                <input type="reset" value="Clear" aria-label="clear">
+                <input type="submit" value="Submit" aria-label="submit">
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>
