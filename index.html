@@ -14,40 +14,47 @@
     <form autocomplete="on" id="form" role="form" aria-label="Register form">
         <div class="col1">
             <label for="name">First Name:</label>
-            <input type="text" id="name" name="name" placeholder="First Name">
+            <input type="text" id="name" name="name" placeholder="First Name" required aria-labelledby="name" aria-placeholder="first name">
             <label for="surname">Second Name:</label>
-            <input type="text" id="surname" name="surname" placeholder="Second Name">
+            <input type="text" id="surname" name="surname" placeholder="Second Name" required aria-labelledby="surname" aria-placeholder="second name">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Email">
+            <input type="email" id="email" name="email" placeholder="Email" required aria-labelledby="email" aria-placeholder="email">
             <label for="phone">Phone:
             </label>
-            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required aria-labelledby="phone" aria-placeholder="phone">
         </div>
         <div class="col2">
-            <label for="date">Delivery Date:</label>
-            <input type="date" id="date" name="date">
-            <p>Payment Type:</p>
+            <label for="delivery_date">Delivery Date:</label>
+            <input type="date" id="delivery_date" name="delivery_date" aria-labelledby="delivery_date">
+            <p role="radiogroup" aria-label="payment_type">Payment Type:</p>
             <label>
-                <input type="radio" name="cash" checked>Cash
+            <input name="payment_type" value="cash" type="radio" checked aria-checked="true">
+            Cash
             </label>
             <label>
-                <input type="radio" name="card" checked>Card
-            </label>
+            <input name="payment_type" value="card" type="radio" aria-checked="false">
+                Card</label>
+<!--            <label>-->
+<!--                <input type="radio" name="cash" checked role="radio" aria-label="cash" aria-checked="true">Cash-->
+<!--            </label>-->
+<!--            <label>-->
+<!--                <input type="radio" name="card" checked role="radio" aria-label="card" aria-checked="true">Card-->
+<!--            </label>-->
             <label for="delivery">Delivery type:</label>
             <select name="delivery" id="delivery">
                 <option value="Select">Select</option>
             </select>
-            <label>
-                <input type="checkbox" checked name="subscribe"> Daily Newsletter
+            <label for="subscribe_to_newsletter">
+                <input type="checkbox" id="subscribe_to_newsletter" checked name="subscribe_to_newsletter" role="checkbox" aria-checked="true" aria-details="subscribe_to_newsletter"> Daily Newsletter
             </label>
         </div>
-            <label class="textarea">Comment:
-                <textarea id="comment" name="comment" rows="5">
+            <label class="textarea" for="type_comment">Comment:
+                <textarea id="type_comment" name="comment" rows="5" aria-label="type_comment">
                 </textarea>
             </label>
             <div class="btn">
-                <input type="reset" value="Clear" aria-label="clear">
-                <input type="submit" value="Submit" aria-label="submit">
+                <input type="reset" value="Clear" aria-label="clear_form">
+                <input type="submit" value="Submit" aria-label="submit_form">
             </div>
         </form>
     </div>
