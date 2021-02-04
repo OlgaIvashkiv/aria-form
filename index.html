@@ -6,55 +6,127 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>ARIA</title>
+    <title>ARIA-FORM</title>
 </head>
 <body>
 <section>
     <div class="container">
-    <form autocomplete="on" id="form" role="form" aria-label="Register form">
+    <form autocomplete="on"
+          id="form"
+          aria-label="Register form">
         <div class="col1">
-            <label for="name">First Name:</label>
-            <input type="text" id="name" name="name" placeholder="First Name" required aria-labelledby="name" aria-placeholder="first name">
-            <label for="surname">Second Name:</label>
-            <input type="text" id="surname" name="surname" placeholder="Second Name" required aria-labelledby="surname" aria-placeholder="second name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Email" required aria-labelledby="email" aria-placeholder="email">
-            <label for="phone">Phone:
+            <label for="name"
+                   aria-labelledby="name"
+            >
+                First Name:
             </label>
-            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required aria-labelledby="phone" aria-placeholder="phone">
+            <input type="text"
+                   id="name"
+                   name="name"
+                   placeholder="First Name"
+                   required
+                   aria-placeholder="first name"
+            >
+            <label for="surname"
+                   aria-labelledby="surname"
+            >
+                Second Name:
+            </label>
+            <input type="text"
+                   id="surname"
+                   name="surname"
+                   placeholder="Second Name"
+                   required
+                   aria-placeholder="second name"
+            >
+            <label for="email"
+                   aria-labelledby="email"
+            >
+                Email:
+            </label>
+            <input type="email"
+                   id="email"
+                   name="email"
+                   placeholder="Email"
+                   required
+                   aria-placeholder="email"
+            >
+            <label for="phone"
+                   aria-labelledby="phone"
+            >
+                Phone:
+            </label>
+            <input type="tel"
+                   id="phone"
+                   name="phone"
+                   placeholder="Phone Number"
+                   required
+                   aria-placeholder="phone"
+            >
         </div>
         <div class="col2">
-            <label for="delivery_date">Delivery Date:</label>
-            <input type="date" id="delivery_date" name="delivery_date" aria-labelledby="delivery_date">
-            <p role="radiogroup" aria-label="payment_type">Payment Type:</p>
-            <label>
-            <input name="payment_type" value="cash" type="radio" checked aria-checked="true">
-            Cash
+            <label for="delivery_date"
+                   aria-labelledby="delivery_date"
+            >
+                Delivery Date:
             </label>
-            <label>
-            <input name="payment_type" value="card" type="radio" aria-checked="false">
-                Card</label>
-<!--            <label>-->
-<!--                <input type="radio" name="cash" checked role="radio" aria-label="cash" aria-checked="true">Cash-->
-<!--            </label>-->
-<!--            <label>-->
-<!--                <input type="radio" name="card" checked role="radio" aria-label="card" aria-checked="true">Card-->
-<!--            </label>-->
-            <label for="delivery">Delivery type:</label>
-            <select name="delivery" id="delivery">
+            <input type="date"
+                   id="delivery_date"
+                   name="delivery_date"
+            >
+            <div role="radiogroup"
+                 aria-labelledby="payment_type"
+            >
+                <p id="payment_type">
+                    Payment type:
+                </p>
+                <label>
+                    <input type="radio"
+                           name="payment_type"
+                           checked
+                           aria-checked="true"
+                           tabindex="0">
+                    Cash
+                </label>
+                <label>
+                    <input type="radio"
+                           name="payment_type"
+                           aria-checked="false"
+                           tabindex="-1">
+                    Card
+                </label>
+            </div>
+            <label for="delivery_type">Delivery type:</label>
+            <select name="delivery_type"
+                    id="delivery_type"
+            >
                 <option value="Select">Select</option>
             </select>
             <label for="subscribe_to_newsletter">
-                <input type="checkbox" id="subscribe_to_newsletter" checked name="subscribe_to_newsletter" role="checkbox" aria-checked="true" aria-details="subscribe_to_newsletter"> Daily Newsletter
+                <input type="checkbox"
+                       id="subscribe_to_newsletter"
+                       checked
+                       name="subscribe_to_newsletter"
+                       aria-checked="true"
+                       aria-details="subscribe_to_newsletter"
+                > Daily Newsletter
             </label>
         </div>
-            <label class="textarea" for="type_comment">Comment:
-                <textarea id="type_comment" name="comment" rows="5" aria-label="type_comment">
+            <label class="textarea"
+                   for="type_comment">Comment:
+                <textarea id="type_comment"
+                          name="comment"
+                          rows="5"
+                          aria-label="type_comment">
                 </textarea>
             </label>
             <div class="btn">
-                <input type="reset" value="Clear" aria-label="clear_form">
-                <input type="submit" value="Submit" aria-label="submit_form">
+                <input type="reset"
+                       value="Clear"
+                       aria-label="clear_form">
+                <input type="submit"
+                       value="Submit"
+                       aria-label="submit_form">
             </div>
         </form>
     </div>

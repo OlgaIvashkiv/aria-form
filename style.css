@@ -8,25 +8,22 @@
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    background-color: #f55767;
+    background-color: #bbbcbc;
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
-    background-color: white;
-    opacity: 90%;
 }
 
 #form {
-    margin: 20% auto;
+    background-color: white;
+    margin: 10% auto;
     padding: 10%;
     width: 50%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-
 }
 
 .col1 {
